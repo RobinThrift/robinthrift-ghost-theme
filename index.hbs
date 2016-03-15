@@ -1,0 +1,19 @@
+{{!< default}}
+<ul class="post-list Atom">
+    {{#foreach posts }}
+    <li class="hentry post">
+        <div class="post-list__resp-wrapper">
+            <h2 class="post-title entry-title">
+                <a href="{{url}}" rel="bookmark">{{title}}</a>
+            </h2>
+            <date class="post__date">{{date format="DD MMMM YYYY"}}</date>
+
+            <article class="entry-summary">
+                {{excerpt words="26"}}
+            </article>
+        </div>
+    </li>
+    {{/foreach}}
+</ul>
+
+{{pagination}}

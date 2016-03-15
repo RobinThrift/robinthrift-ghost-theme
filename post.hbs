@@ -1,0 +1,16 @@
+{{!< default}}
+
+{{#post}}
+<article class="hentry post">
+    <header class="post__header">
+        <div class="post__header__wrapper">
+            <h1 class="entry-title">{{title}}</h1>
+            <date class="published post__date">{{date format="DD MMMM YYYY"}}</date>
+        </div>
+    </header>
+
+    <div class="entry-content">
+        {{content}}
+    </div>
+</article>
+{{/post}}
