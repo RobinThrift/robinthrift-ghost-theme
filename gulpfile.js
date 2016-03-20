@@ -3,9 +3,9 @@ var gulp = require('gulp');
 var config = {
     statics: ['package.json'],
     templates: ['*.hbs', 'partials/*.hbs'],
-    assets: ['assets/**/*', '!assets/css'],
-    styles: ['assets/css/main.scss'],
-    destination: './tmp/themes/robinthrift'
+    assets: ['assets-src/**/*', '!assets-src/css'],
+    styles: ['assets-src/css/main.scss'],
+    destination: process.env.NODE_ENV === 'production' ? '.' : './tmp/themes/robinthrift'
 };
 
 gulp.task('statics', () => {
