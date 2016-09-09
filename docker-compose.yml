@@ -4,7 +4,7 @@ ghost:
         - ./tmp:/var/lib/ghost
         - ./config.js:/usr/src/ghost/config.js:ro
     ports:
-        - "80:2368"
+        - "8000:2368"
     command: "node index"
     environment:
         NODE_ENV: development
