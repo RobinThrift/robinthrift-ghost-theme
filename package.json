@@ -10,8 +10,11 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "cssnano": "^3.7.4",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.2.0",
-    "node-neat": "^1.7.2"
+    "gulp-postcss": "^6.2.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-fontpath": "^0.3.0",
+    "postcss-import": "^8.1.2"
   }
 }

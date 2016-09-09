@@ -1,10 +1,9 @@
 ghost:
-    image: ghost:latest
+    image: ghost:0.10.1
     volumes:
         - ./tmp:/var/lib/ghost
-        - ./config.js:/usr/src/ghost/config.js:ro
+        # - ./config.js:/var/lib/ghost/config.js
     ports:
-        - "8000:2368"
-    command: "node index"
+        - "8000:8000"
     environment:
         NODE_ENV: development

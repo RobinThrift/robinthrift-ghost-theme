@@ -1,10 +1,12 @@
-var gulp = require('gulp');
+'use strict';
 
-var config = {
+let gulp = require('gulp');
+
+let config = {
     statics: ['package.json'],
     templates: ['*.hbs', 'partials/*.hbs'],
-    assets: ['assets/**/*', '!assets/css'],
-    styles: ['assets/css/main.scss'],
+    assets: ['assets/**/*', '!assets/css/*'],
+    styles: ['assets/css/main.css'],
     destination: './tmp/themes/robinthrift'
 };
 
@@ -24,12 +26,23 @@ gulp.task('assets', () => {
 })
 
 gulp.task('styles', () => {
-    var sass = require('gulp-sass')
+    let postcss = require('gulp-postcss');
+    let cssnext = require('postcss-cssnext');
+    let cssnano = require('cssnano');
+    let cssImport = require('postcss-import');
+    let fontPath = require('postcss-fontpath');
+
     return gulp.src(config.styles)
-        .pipe(sass({
-            outputStyle: 'compressed',
-            includePaths: require('node-neat').includePaths
-        }))
+        .pipe(postcss(
+            [
+                cssImport({
+                    path: ['assets/css']
+                }),
+                cssnext(),
+                fontPath(),
+                // cssnano()
+            ]
+        ))
         .pipe(gulp.dest(config.destination + '/assets/css'))
 })
 

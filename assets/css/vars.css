@@ -1,0 +1,9 @@
+
+:root {
+    --header-bg-left: #cc8fb0;
+    --header-bg-right: #d4cbee;
+    --header-colour: #f5f5f5;
+    --logo-font: "Ostrich Sans", sans-serif;
+    --copy-font: "Latin Modern Roman", serif;
+    --max-width: 1600px;
+}

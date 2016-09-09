@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: 'Ostrich Sans';
+    font-path: '../fonts/ostrich-sans/ostrichsans-light';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Latin Modern Roman';
+    font-path: '../fonts/latin-modern-roman/regular/latin-modern-roman-regular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Latin Modern Roman';
+    font-path: '../fonts/latin-modern-roman/bold/latin-modern-roman-bold';
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hack';
+    font-path: '../fonts/hack/hack-regular';
+    font-weight: normal;
+    font-style: normal;
+}
+

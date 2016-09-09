@@ -1,0 +1,116 @@
+
+.site-header {
+    background: var(--header-bg-left);
+    background: linear-gradient(to right, var(--header-bg-left) 0%, var(--header-bg-left) 20%, var(--header-bg-right) 100%);
+    color: var(--header-colour);
+    width: 100%;
+    height: 80px;
+    line-height: 60px;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--logo-font);
+
+    & a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    & h1.logo {
+        font-size: 2.5em;
+        height: 100%;
+        margin: 0;
+        font-weight: normal;
+        padding: 0px 10px;
+        position: relative;
+        letter-spacing: 3px;
+        cursor: pointer;
+
+        &::after {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            display: block;
+            height: 75%;
+            width: 75%;
+            bottom: 3px;
+            right: 3px;
+            border-right: 1px solid var(--header-colour);
+            border-bottom: 1px solid var(--header-colour);
+            transition: all .2s;
+        }
+
+        &::before {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            display: block;
+            height: 75%;
+            width: 75%;
+            top: 0px;
+            left: -5px;
+            border-left: 1px solid var(--header-colour);
+            border-top: 1px solid var(--header-colour);
+            transition: all .2s;
+        }
+
+        &:hover {
+            &::before {
+                top: -3px;
+                left: -8px;
+            }
+
+            &::after {
+                bottom: 0px;
+                right: 0px;
+            }
+        }
+    }
+
+    & .social-nav {
+        height: 100%;
+        font-size: 1.3em;
+        letter-spacing: 1px;
+        margin-left: 30px;
+
+        & ul {
+            display: flex;
+            padding: 0;
+            margin: 3px 0 0 0;
+            height: 100%;
+
+            & li {
+                height: 100%;
+                margin: 0 10px;
+                list-style: none;
+                position: relative;
+            }
+
+            & a {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 50%;
+                    background: var(--header-colour);
+                    height: 1px;
+                    width: 0%;
+                    transition: all .2s;
+                }
+
+                &:hover {
+                    &::after {
+                        left: 0%;
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+}
